@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <link rel="stylesheet" href="app.css">
+</head>
+
+<body onmouseup="mouseup()">
+  <h1 id="intro1">Our Solar-System</h1>
+  <h2 id="intro2">(Hold left-click on a planet to know more.)</h2>
+  <div class="container">
+    <img src="Planets/SolarSystem.jpg" alt="SolarSystem" id="base">
+
+    <img src="Planets/Mercury.png" alt="" id="mercury" onmousedown="mousedown(0)" class="planets">
+    <div class="description mercury-desc">
+      <b>MERCURY</b>
+      <p>
+        Distance from Sun: 66.78 million km.<br>
+        1 year on Mercury = 87.97 Earth-days. <br>
+        1st planet from the Sun, smallest in the Solar System.<br>
+        Named after ancient Roman God <i>Mercurius</i>.<br>
+
+      </p>
+
+    </div>
+    <img src="Planets/Venus.png" alt="" id="venus" onmousedown="mousedown(1)" class="planets">
+    <div class="description venus-desc">
+      <b>VENUS</b>
+      <p>
+        Distance from Sun: 107.49 million km. <br>
+        1 year on Venus = 224.70 Earth-days. <br>
+        Has the densest atmosphere of the terrestrial planets. <br>
+        Mean temperature: 464 deg. C | Pressure : 92 atm. <br>
+      </p>
+    </div>
+    <img src="Planets/Earth.png" alt="" id="earth" onmousedown="mousedown(2)" class="planets">
+    <div class="description earth-desc">
+      <b>EARTH</b>
+      <p>
+        Distance from Sun: 152.06 million km. <br>
+        1 year on Earth = 365.26 Earth-days. <br>
+        Only planet with life on it. <br>
+        Has a single moon: the Moon.
+      </p>
+    </div>
+    <img src="Planets/Mars.png" alt="" id="mars" onmousedown="mousedown(3)" class="planets">
+    <div class="description mars-desc">
+      <b>MARS</b>
+      <p>
+        Distance from Sun: 212.65 million km. <br>
+        1 year on Mars = 686.98 Earth-days. <br>
+        Also called Red Planet because of its reddish appearance. <br>
+        Contains water and dry ice on polar ice caps.
+      </p>
+    </div>
+    <img src="Planets/Jupiter.png" alt="" id="jupiter" onmousedown="mousedown(4)" class="planets">
+    <div class="description jupiter-desc">
+      <b>JUPITER</b>
+      <p>
+        Distance from Sun: 778.3 million km. <br>
+        1 year on Jupiter = 11.86 Earth-years. <br>
+        Largest planet in the Solar system. <br>
+        Third brightest object in the Earth's night sky after the Moon and Venus. <br>
+        Has around 95 moons officially recognised.
+      </p>
+    </div>
+    <img src="Planets/Saturn.png" alt="" id="saturn" onmousedown="mousedown(5)" class="planets">
+    <div class="description saturn-desc">
+      <b>SATURN</b>
+      <p>
+        Distance from Sun: 1,447.2 million km. <br>
+        1 year on Saturn = 29.46 Earth-years. <br>
+        Second largest planet in the Solar system after Jupiter. <br>
+        Has around 146 moons officially recognised. <br>
+        Wind speed can reach upto 1,800 km/h.
+      </p>
+    </div>
+    <img src="Planets/Uranus.png" alt="" id="uranus" onmousedown="mousedown(6)" class="planets">
+    <div class="description uranus-desc">
+      <b>URANUS</b>
+      <p>
+        Distance from Sun: 2,928.2 million km. <br>
+        1 year on Uranus = 84.01 Earth-years. <br>
+        Gaseous cyan-coloured ice giant. <br>
+        Notable axial-tilt of 82.23 deg. causing 42 years of day and night cycles each.
+      </p>
+    </div>
+    <img src="Planets/Neptune.png" alt="" id="neptune" onmousedown="mousedown(7)" onmouseup="mouseup(7)"
+      class="planets">
+    <div class="description neptune-desc">
+      <b>NEPTUNE</b>
+      <p>
+        Distance from Sun: 4,471.9 million km. <br>
+        1 year on Neptune = 164.79 Earth-years. <br>
+        Eighth and farthest known planet in the Solar System. <br>
+        Only planet that was found by mathematical predictions. <br>
+        Not visible to unaided eye.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    let desc = document.querySelectorAll('.description');
+    for (let des of desc) {
+      des.style.opacity = 0;
+      des.style.zIndex = -2;
+    }
+    function mousedown(index) {
+      desc[index].style.opacity = 1;
+      desc[index].style.zIndex = 2;
+    }
+    function mouseup() {
+      for (let des of desc) {
+        des.style.opacity = 0;
+        des.style.zIndex = -2;
+      }
+    }
+  </script>
+</body>
+
+</html>
